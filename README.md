@@ -7,8 +7,8 @@ Installing EzLogin on your Magento Store will allow your users to login using an
 4. If you’ve purchased the “Installation Support” add-on, please allow 1 business day for the VelanApps support team to connect with you.
 
 General Features :
-→ Enables shoppers to login using one of their social accounts.
-→ EzLogin Lite version supports Facebook only.
+1. Enables shoppers to login using one of their social accounts.
+2. EzLogin Lite version supports Facebook only.
 → Fetches customer profile from the logged in social account and displays it (including profile picture).
 → Supports most of the basic templates in Magento.
 → Allows for 'EzLogin' option to be integrated in the checkout page as well.
