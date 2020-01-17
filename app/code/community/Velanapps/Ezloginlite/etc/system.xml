@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!--
+ * Velan Info Services India Pvt Ltd.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.velanapps.com/License.txt
+ *
+  /***************************************
+ *         MAGENTO EDITION USAGE NOTICE *
+ * *************************************** */
+/* This package designed for Magento COMMUNITY edition
+ * Velan Info Services does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * Velan Info Services does not provide extension support in case of
+ * incorrect edition usage.
+  /***************************************
+ *         DISCLAIMER   *
+ * *************************************** */
+/* Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ * ****************************************************
+ * @category   Velanapps
+ * @package    EzLogin Lite
+ * @author     Velan Team
+ * @copyright  Copyright (c) 2012 - 2013 Velan Info Services India Pvt Ltd. (http://www.velanapps.com)
+ * @license    http://store.velanapps.com/License.txt
+-->
+<config>
+    <tabs>
+        <ezloginliteconfiguration translate="label" module="ezloginlite">
+            <label>EZLOGIN LITE</label>
+            <sort_order>100</sort_order>
+        </ezloginliteconfiguration>
+    </tabs>
+    <sections>
+        <ezfacebook translate="label" module="ezloginlite">
+            <label>Facebook Account Configuration</label>
+            <tab>ezloginliteconfiguration</tab>
+            <sort_order>888</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <facebook translate="label">
+                    <label>Facebook Account Settings</label>
+					<frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+					   <active translate="label">
+                            <label>Facebook Login Status</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>100</sort_order>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <appid translate="label">
+                            <label>Application Id</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </appid>
+						<appsec translate="label">
+                            <label>Application Secret Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>111</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </appsec>
+						<iconimage translate="label">
+                            <label>Facebook Login Icon</label>
+                            <frontend_type>file</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media/ezloginlite/images</upload_dir>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </iconimage>
+						<url translate="label">
+                            <label>Facebook Icon URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>121</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </url>
+						<iconwidth translate="label">
+                            <label>Login Icon Width</label>
+                            <comment>Default Width 40px.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>122</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </iconwidth>
+						<iconheight translate="label">
+                            <label>Login Icon Height</label>
+                            <comment>Default Height 40px.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </iconheight>
+						<poweredby translate="label">
+                            <label>Powered By</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>140</sort_order>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </poweredby>
+                    </fields>
+                </facebook>
+            </groups>
+        </ezfacebook>
+		<help translate="label" module="ezloginlite">
+				<label>Help</label>
+				<tab>ezloginliteconfiguration</tab>
+				<sort_order>889</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+				<groups>
+					<ezloginlite translate="label">
+						<label>Help</label>
+						<frontend_type>text</frontend_type>
+						<sort_order>100</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+						<comment><![CDATA[ 
+						<table>
+						<tr><td><b>Extension Name     </b></td><td><b>:&nbsp;EzLogin</b></td></tr>
+						<tr><td>&nbsp;</td></tr>
+						<tr><td><b>Version Support    </b></td><td><b>:&nbsp;1.5, 1.6, 1.7&nbsp;(All Series)</b></td></tr>
+						<tr><td>&nbsp;</td></tr>
+						<tr><td><b>Site URL           </b></td><td><b>:&nbsp;<a href="http://velanapps.com" target="_blank">velanapps.com</a></b></td></tr>
+						<tr><td>&nbsp;</td></tr>
+						<tr><td><b>Product Link       </b></td><td><b>:&nbsp;<a href="http://store.velanapps.com" target="_blank">EzLogin Page</a></b></td></tr>
+						</table>
+						]]></comment>
+					</ezloginlite>
+				</groups>
+		</help>
+    </sections>
+</config>

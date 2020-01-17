@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<!--
+ * Velan Info Services India Pvt Ltd.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.velanapps.com/License.txt
+ *
+  /***************************************
+ *         MAGENTO EDITION USAGE NOTICE *
+ * *************************************** */
+/* This package designed for Magento COMMUNITY edition
+ * Velan Info Services does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * Velan Info Services does not provide extension support in case of
+ * incorrect edition usage.
+  /***************************************
+ *         DISCLAIMER   *
+ * *************************************** */
+/* Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ * ****************************************************
+ * @category   Velanapps
+ * @package    EzLogin Lite
+ * @author     Velan Team
+ * @copyright  Copyright (c) 2012 - 2013 Velan Info Services India Pvt Ltd. (http://www.velanapps.com)
+ * @license    http://store.velanapps.com/License.txt
+-->
+<config>
+        <modules>
+            <Velanapps_Ezloginlite>
+                <version>1.0.0</version>
+            </Velanapps_Ezloginlite>
+        </modules>
+        <frontend>
+        	<routers>
+                <ezloginlite>
+                    <use>standard</use>
+                    <args>
+                        <module>Velanapps_Ezloginlite</module>
+                        <frontName>ezloginlite</frontName>
+                    </args>
+                </ezloginlite>
+            </routers>
+			<layout>
+				<updates>
+					<ezloginlite>
+						<file>ezloginlite.xml</file>
+					</ezloginlite>
+				</updates>
+			</layout>
+		</frontend>   
+        <global>
+            <models>
+                <ezloginlite>
+                    <class>Velanapps_Ezloginlite_Model</class>
+                    <resourceModel>ezloginlite_mysql4</resourceModel>
+                </ezloginlite>
+				<ezloginlite_mysql4>
+                    <class>Velanapps_Ezloginlite_Model_Mysql4</class>
+                    <entities>
+                        <ezloginliteaccounts>
+                            <table>ezloginlite_accounts</table>
+                        </ezloginliteaccounts>
+						<ezloginlitecustomers>
+                            <table>ezloginlite_customers</table>
+                        </ezloginlitecustomers>
+                    </entities>
+                </ezloginlite_mysql4>
+            </models>
+            <resources>
+                <ezloginlite_setup>
+                    <setup>
+                        <module>Velanapps_Ezloginlite</module>
+                    </setup>
+                    <connection>
+                        <use>core_setup</use>
+                    </connection>
+                </ezloginlite_setup>
+                <ezloginlite_write>
+                    <connection>
+                        <use>core_write</use>
+                    </connection>
+                </ezloginlite_write>
+                <ezloginlite_read>
+                    <connection>
+                        <use>core_read</use>
+                    </connection>
+                </ezloginlite_read>
+            </resources>
+            <blocks>
+                <ezloginlite>
+                    <class>Velanapps_Ezloginlite_Block</class>
+                </ezloginlite>
+            </blocks>
+            <helpers>
+                <ezloginlite>
+                    <class>Velanapps_Ezloginlite_Helper</class>
+                </ezloginlite>
+            </helpers>
+        </global>
+	<!-- Overriding Customer Admin Controller -->	
+	<admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Velanapps_Ezloginlite before="Mage_Adminhtml">Velanapps_Ezloginlite</Velanapps_Ezloginlite>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+	<!-- Default values for system config sections -->
+	<default>
+        <ezfacebook>
+            <facebook>
+                <active>0</active>
+				<iconwidth>40</iconwidth>
+				<iconheight>40</iconheight>
+            </facebook>
+        </ezfacebook>
+    </default>
+</config>
